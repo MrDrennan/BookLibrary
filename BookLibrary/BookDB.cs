@@ -65,5 +65,34 @@ namespace BookLibrary
                 return false;
             }
         }
+
+        public static bool Update(Book currBook)
+        {
+            SqlCommand updateCmd = new SqlCommand
+            {
+                CommandText =
+                "UPDATE Book "
+                + "SET Price = @price, Title = @title "
+                + "WHERE ISBN = @isbn"
+            };
+
+            updateCmd.Parameters.AddWithValue("@isbn", currBook.ISBN);
+            updateCmd.Parameters.AddWithValue("@price", currBook.Price);
+            updateCmd.Parameters.AddWithValue("@title", currBook.Title);
+
+            using (updateCmd.Connection = DBHelper.GetConnection())
+            {
+                updateCmd.Connection.Open();
+                int rowsAffected = updateCmd.ExecuteNonQuery();
+
+                if (rowsAffected == 1)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
+
+
     }
 }
