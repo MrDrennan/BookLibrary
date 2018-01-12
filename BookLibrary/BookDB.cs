@@ -7,8 +7,15 @@ using System.Threading.Tasks;
 
 namespace BookLibrary
 {
+    /// <summary>
+    /// Interacts with the Books table in the Library DB and Book objects
+    /// </summary>
     static class BookDB
     {
+        /// <summary>
+        /// Generates a list of Book objects from all the columns from the Books table
+        /// </summary>
+        /// <returns>a list of Book objects in all the colums of the Books table</returns>
         public static List<Book> GetAllBooks()
         {
             SqlCommand selCmd = new SqlCommand
@@ -40,6 +47,11 @@ namespace BookLibrary
             }
         }
 
+        /// <summary>
+        /// Accepts a Book object parameter that is added to the Books table in the DB
+        /// </summary>
+        /// <param name="currBook">The book to be added to the books table in the DB</param>
+        /// <returns>bool returns true if add operation is succesful</returns>
         public static bool Add(Book currBook)
         {
             SqlCommand addCmd = new SqlCommand
@@ -66,6 +78,12 @@ namespace BookLibrary
             }
         }
 
+        /// <summary>
+        /// Accepts a book object parameter that updates the book table based on
+        /// the ISBN primary key
+        /// </summary>
+        /// <param name="currBook">Represents the book to updated in the Books table</param>
+        /// <returns>bool returns true if update operation is succesful</returns>
         public static bool Update(Book currBook)
         {
             SqlCommand updateCmd = new SqlCommand
@@ -93,6 +111,11 @@ namespace BookLibrary
             }
         }
 
+        /// <summary>
+        /// Accepts a Book object that is to be deleted from the Book table
+        /// </summary>
+        /// <param name="currBook">The book the will be deleted from the Book table</param>
+        /// <returns>bool returns true if delete operation is succesful</returns>
         public static bool Delete(Book currBook)
         {
             SqlCommand deleteCmd = new SqlCommand
