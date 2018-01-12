@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace BookLibrary
 {
+    /// <summary>
+    /// Represents a book
+    /// </summary>
     class Book
     {
         public string ISBN { get; set; }
