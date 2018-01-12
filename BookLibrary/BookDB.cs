@@ -93,6 +93,28 @@ namespace BookLibrary
             }
         }
 
+        public static bool Delete(Book currBook)
+        {
+            SqlCommand deleteCmd = new SqlCommand
+            {
+                CommandText =
+                "DELETE Book "
+                + "WHERE ISBN = @isbn"
+            };
 
+            deleteCmd.Parameters.AddWithValue("@isbn", currBook.ISBN);
+
+            using (deleteCmd.Connection = DBHelper.GetConnection())
+            {
+                deleteCmd.Connection.Open();
+                int rowsAffected = deleteCmd.ExecuteNonQuery();
+
+                if (rowsAffected == 1)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
     }
 }
