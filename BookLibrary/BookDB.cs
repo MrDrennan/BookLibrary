@@ -39,5 +39,31 @@ namespace BookLibrary
                 return bookList;
             }
         }
+
+        public static bool Add(Book currBook)
+        {
+            SqlCommand addCmd = new SqlCommand
+            {
+                CommandText =
+                "INSERT INTO Book (ISBN, Price, Title) "
+                + "VALUES (@isbn, @price, @title)"
+            };
+
+            addCmd.Parameters.AddWithValue("@isbn", currBook.ISBN);
+            addCmd.Parameters.AddWithValue("@price", currBook.Price);
+            addCmd.Parameters.AddWithValue("@title", currBook.Title);
+
+            using (addCmd.Connection = DBHelper.GetConnection())
+            {
+                addCmd.Connection.Open();
+                int rowsAffected = addCmd.ExecuteNonQuery();
+
+                if (rowsAffected == 1)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
     }
 }
