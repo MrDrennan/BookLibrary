@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboBooks = new System.Windows.Forms.ComboBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
@@ -44,13 +44,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Books:";
             // 
-            // comboBox1
+            // cboBooks
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(82, 27);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 1;
+            this.cboBooks.FormattingEnabled = true;
+            this.cboBooks.Location = new System.Drawing.Point(82, 27);
+            this.cboBooks.Name = "cboBooks";
+            this.cboBooks.Size = new System.Drawing.Size(121, 21);
+            this.cboBooks.TabIndex = 1;
             // 
             // btnAdd
             // 
@@ -89,7 +89,7 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnUpdate);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cboBooks);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Library";
@@ -101,7 +101,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboBooks;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnDelete;
