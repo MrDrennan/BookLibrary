@@ -16,5 +16,17 @@ namespace BookLibrary
         {
             InitializeComponent();
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            frmAddBook addBook = new frmAddBook();
+            addBook.ShowDialog();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            frmUpdateBook updateBook = new frmUpdateBook();
+            updateBook.ShowDialog();
+        }
     }
 }
