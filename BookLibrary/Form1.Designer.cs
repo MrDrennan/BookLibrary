@@ -51,6 +51,7 @@
             this.cboBooks.Name = "cboBooks";
             this.cboBooks.Size = new System.Drawing.Size(121, 21);
             this.cboBooks.TabIndex = 1;
+            this.cboBooks.DropDown += new System.EventHandler(this.cboBooks_DropDown);
             // 
             // btnAdd
             // 
@@ -80,6 +81,7 @@
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // Form1
             // 
@@ -93,6 +95,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Library";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

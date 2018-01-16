@@ -67,6 +67,7 @@
             // txtIsbn
             // 
             this.txtIsbn.Location = new System.Drawing.Point(110, 30);
+            this.txtIsbn.MaxLength = 13;
             this.txtIsbn.Name = "txtIsbn";
             this.txtIsbn.Size = new System.Drawing.Size(100, 20);
             this.txtIsbn.TabIndex = 3;
@@ -93,6 +94,7 @@
             this.btnAdd.TabIndex = 6;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // frmAddBook
             // 
