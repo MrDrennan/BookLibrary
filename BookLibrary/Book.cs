@@ -9,10 +9,14 @@ namespace BookLibrary
     /// <summary>
     /// Represents a book
     /// </summary>
-    class Book
+    public class Book
     {
         public string ISBN { get; set; }
         public decimal Price { get; set; }
         public string Title { get; set; }
+        public override string ToString()
+        {
+            return Title;
+        }
     }
 }
