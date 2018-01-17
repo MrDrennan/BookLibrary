@@ -58,7 +58,8 @@ namespace BookLibrary
                 return false;
             if (!IsPresent(txtTitle, "Title"))
                 return false;
-
+            if (!IsDecimal(txtPrice, "Price"))
+                return false;
             return true;
         }
         private bool IsPresent(TextBox textBox, string name)
@@ -75,7 +76,7 @@ namespace BookLibrary
         private bool IsDecimal(TextBox textBox, string name)
         {
             decimal number = 0m;
-            if (Decimal.TryParse(textBox.Text, out number))
+            if (Decimal.TryParse(textBox.Text.Replace("$", string.Empty), out number))
             {
                 return true;
             }
