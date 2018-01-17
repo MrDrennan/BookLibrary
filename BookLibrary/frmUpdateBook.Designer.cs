@@ -31,9 +31,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtIsbn = new System.Windows.Forms.TextBox();
+            this.txtPrice = new System.Windows.Forms.TextBox();
+            this.txtTitle = new System.Windows.Forms.TextBox();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -64,27 +64,28 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Title:";
             // 
-            // textBox1
+            // txtIsbn
             // 
-            this.textBox1.Location = new System.Drawing.Point(113, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtIsbn.Location = new System.Drawing.Point(113, 36);
+            this.txtIsbn.MaxLength = 13;
+            this.txtIsbn.Name = "txtIsbn";
+            this.txtIsbn.ReadOnly = true;
+            this.txtIsbn.Size = new System.Drawing.Size(100, 20);
+            this.txtIsbn.TabIndex = 3;
             // 
-            // textBox2
+            // txtPrice
             // 
-            this.textBox2.Location = new System.Drawing.Point(113, 74);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 4;
+            this.txtPrice.Location = new System.Drawing.Point(113, 74);
+            this.txtPrice.Name = "txtPrice";
+            this.txtPrice.Size = new System.Drawing.Size(100, 20);
+            this.txtPrice.TabIndex = 4;
             // 
-            // textBox3
+            // txtTitle
             // 
-            this.textBox3.Location = new System.Drawing.Point(113, 115);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 5;
+            this.txtTitle.Location = new System.Drawing.Point(113, 115);
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(100, 20);
+            this.txtTitle.TabIndex = 5;
             // 
             // btnUpdate
             // 
@@ -94,6 +95,7 @@
             this.btnUpdate.TabIndex = 6;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // frmUpdateBook
             // 
@@ -101,14 +103,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(270, 261);
             this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTitle);
+            this.Controls.Add(this.txtPrice);
+            this.Controls.Add(this.txtIsbn);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "frmUpdateBook";
             this.Text = "Update Book";
+            this.Load += new System.EventHandler(this.frmUpdateBook_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,9 +122,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtIsbn;
+        private System.Windows.Forms.TextBox txtPrice;
+        private System.Windows.Forms.TextBox txtTitle;
         private System.Windows.Forms.Button btnUpdate;
     }
 }
