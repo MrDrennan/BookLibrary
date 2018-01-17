@@ -34,7 +34,7 @@ namespace BookLibrary
                 Book updatedBook = new Book();
 
                 updatedBook.ISBN = txtIsbn.Text;
-                updatedBook.Price = Convert.ToDecimal(txtPrice.Text);
+                updatedBook.Price = Convert.ToDecimal(txtPrice.Text.Replace("$", string.Empty));
                 updatedBook.Title = txtTitle.Text;
 
 
