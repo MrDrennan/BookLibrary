@@ -18,7 +18,7 @@ namespace BookLibrary
         /// <returns>SqlConnection object for the desired database</returns>
         public static SqlConnection GetConnection()
         {
-            return new SqlConnection("Data Source=localhost;Initial Catalog=LibraryDB;Integrated Security=True");
+            return new SqlConnection("Data Source=(localdb)\\ProjectsV13;Initial Catalog=LibraryDB;Integrated Security=True");
         }
     }
 }
