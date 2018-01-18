@@ -77,8 +77,8 @@ namespace BookLibrary
             if (BookDB.Delete(selectedBook))
             {
                 MessageBox.Show("Book Deleted!");
-                PopulateBooksCombobox();
                 cboBooks.SelectedIndex = -1;
+                PopulateBooksCombobox();
             }
             else
             {
