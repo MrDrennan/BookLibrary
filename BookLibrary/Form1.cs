@@ -36,6 +36,7 @@ namespace BookLibrary
                 frmUpdateBook updateForm = new frmUpdateBook(b);
 
                 updateForm.ShowDialog();
+                cboBooks.SelectedIndex = -1;
             }
             
         }
@@ -77,6 +78,7 @@ namespace BookLibrary
             {
                 MessageBox.Show("Book Deleted!");
                 PopulateBooksCombobox();
+                cboBooks.SelectedIndex = -1;
             }
             else
             {
